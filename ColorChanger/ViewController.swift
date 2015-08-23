@@ -25,12 +25,13 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    @IBAction func colorMix(sender:AnyObject) {
-        var redValue: Float = redSlider.value
-        var greenValue: Float = greenSlider.value
-        var blueValue: Float = blueSlider.value
+    @IBAction func colorMix(sender:UISlider) {
+        let redValue =  CGFloat(self.redSlider.value)
+        let greenValue = CGFloat(self.greenSlider.value)
+        let blueValue = CGFloat(self.blueSlider.value)
         
-        println(redValue.dynamicType)
+        colorBox.backgroundColor = UIColor(red:redValue, green: greenValue, blue: blueValue, alpha:1.0)
+        
     }
 
 }
