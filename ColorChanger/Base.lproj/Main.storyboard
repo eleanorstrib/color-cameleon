@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,7 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="FKS-P6-C0g" userLabel="redSlider">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tp0-7K-E5u" userLabel="colorBox">
+                                <rect key="frame" x="130" y="333" width="184" height="130"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="FKS-P6-C0g" userLabel="redSlider">
                                 <rect key="frame" x="128" y="94" width="188" height="31"/>
                                 <color key="minimumTrackTintColor" red="0.80000000000000004" green="0.20000000000000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="maximumTrackTintColor" red="0.98605981691919198" green="0.24976011945333454" blue="0.0092208442472193359" alpha="1" colorSpace="calibratedRGB"/>
@@ -26,7 +29,7 @@
                                     <action selector="colorMix:" destination="vXZ-lx-hvc" eventType="valueChanged" id="lql-yp-mDt"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nCO-dj-jMw" userLabel="greenSlider">
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nCO-dj-jMw" userLabel="greenSlider">
                                 <rect key="frame" x="128" y="175" width="188" height="31"/>
                                 <color key="minimumTrackTintColor" red="0.022464589619999999" green="0.49305555559999997" blue="0.034133972829999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="maximumTrackTintColor" red="0.022464589619999999" green="0.49305555559999997" blue="0.034133972829999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -35,7 +38,7 @@
                                     <action selector="colorMix:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Obl-JG-1D4"/>
                                 </connections>
                             </slider>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="trc-II-JUV" userLabel="blueSlider">
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="trc-II-JUV" userLabel="blueSlider">
                                 <rect key="frame" x="128" y="253" width="188" height="31"/>
                                 <color key="minimumTrackTintColor" red="0.1849488366" green="0.38360288799999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="maximumTrackTintColor" red="0.1849488366" green="0.38360288799999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -44,44 +47,39 @@
                                     <action selector="colorMix:" destination="vXZ-lx-hvc" eventType="valueChanged" id="B10-sb-TyA"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="red" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kfw-oA-5gi">
-                                <rect key="frame" x="176" y="62" width="92" height="40"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <color key="textColor" red="0.52592329545454541" green="0.52592329545454541" blue="0.52592329545454541" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="green" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPN-Td-GwI">
-                                <rect key="frame" x="176" y="140" width="92" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="green" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPN-Td-GwI">
+                                <rect key="frame" x="176" y="143" width="92" height="40"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <color key="textColor" red="0.52592329550000005" green="0.52592329550000005" blue="0.52592329550000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="blue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2Y-iu-spW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="blue" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2Y-iu-spW">
                                 <rect key="frame" x="176" y="224" width="92" height="40"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <color key="textColor" red="0.52592329550000005" green="0.52592329550000005" blue="0.52592329550000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tp0-7K-E5u" userLabel="colorBox">
-                                <rect key="frame" x="122" y="302" width="200" height="203"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="red" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kfw-oA-5gi">
+                                <rect key="frame" x="176" y="62" width="92" height="40"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="0.52592329545454541" green="0.52592329545454541" blue="0.52592329545454541" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="tp0-7K-E5u" secondAttribute="centerX" id="X9b-VZ-U0Q"/>
-                            <constraint firstAttribute="centerX" secondItem="tp0-7K-E5u" secondAttribute="centerX" id="aJw-fV-E4s"/>
-                            <constraint firstAttribute="centerX" secondItem="tp0-7K-E5u" secondAttribute="centerX" id="k5N-52-5W5"/>
-                            <constraint firstItem="tp0-7K-E5u" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="106" id="oHv-ru-4nn"/>
+                            <constraint firstAttribute="centerX" secondItem="tPN-Td-GwI" secondAttribute="centerX" id="2Y4-d8-s35"/>
+                            <constraint firstAttribute="centerX" secondItem="nCO-dj-jMw" secondAttribute="centerX" id="5ik-we-Qeb"/>
+                            <constraint firstAttribute="centerX" secondItem="Kfw-oA-5gi" secondAttribute="centerX" id="El8-hj-VZZ"/>
+                            <constraint firstItem="Kfw-oA-5gi" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" priority="750" constant="60" id="HD1-XX-fJv"/>
+                            <constraint firstItem="nCO-dj-jMw" firstAttribute="top" secondItem="tPN-Td-GwI" secondAttribute="bottom" constant="-11" id="Hl0-aU-BE1"/>
+                            <constraint firstAttribute="centerX" secondItem="A2Y-iu-spW" secondAttribute="centerX" id="ONh-gm-lcf"/>
+                            <constraint firstItem="FKS-P6-C0g" firstAttribute="top" secondItem="Kfw-oA-5gi" secondAttribute="bottom" constant="-8" id="jjm-xX-Bqa"/>
+                            <constraint firstAttribute="centerX" secondItem="trc-II-JUV" secondAttribute="centerX" id="oiN-4i-6iY"/>
+                            <constraint firstAttribute="centerX" secondItem="FKS-P6-C0g" secondAttribute="centerX" id="t0Z-1b-tBU"/>
+                            <constraint firstAttribute="centerX" secondItem="tp0-7K-E5u" secondAttribute="centerX" id="tf9-IO-WFF"/>
+                            <constraint firstItem="tPN-Td-GwI" firstAttribute="top" secondItem="FKS-P6-C0g" secondAttribute="bottom" constant="15" id="udR-8B-KXC"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="X9b-VZ-U0Q"/>
-                                <exclude reference="aJw-fV-E4s"/>
-                                <exclude reference="k5N-52-5W5"/>
-                                <exclude reference="oHv-ru-4nn"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="blueSlider" destination="trc-II-JUV" id="kZf-h5-ZrH"/>
